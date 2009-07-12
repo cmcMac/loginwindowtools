@@ -13,7 +13,7 @@ http://developer.apple.com/samplecode/NullAuthPlugin/index.html
 Installing
 -----
 
-To use your plugin you need to do two things: put the bundle in the right place, and get the proper entry into the authorization policy database. For simplicities' sake I will just cover how to do this by editing /etc/authoization file directly. This works just fine in 10.4 and 10.5, but Apple can change this at any point so for real solutions you should use either /usr/bin/security or the Authoization Services C API.
+To use your plugin you need to do two things: put the bundle in the right place (in /Library/Security/SecurityAgentPlugins with root:wheel ownership), and get the proper entry into the authorization policy database. For simplicities' sake I will just cover how to do this by editing /etc/authoization file directly. This works just fine in 10.4 and 10.5, but Apple can change this at any point so for real solutions you should use either /usr/bin/security or the Authoization Services C API.
 
 Open the /etc/authorization file in your editor of choice (this file requires admin rights to write) and find the section at "rights->system.login.console" the default version should look like this:
 
