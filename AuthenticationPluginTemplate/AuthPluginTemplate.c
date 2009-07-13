@@ -86,6 +86,16 @@ extern OSStatus AuthorizationPluginCreate (const AuthorizationCallbacks * callba
 }
 
 static OSStatus PluginDestroy (AuthorizationPluginRef pluginRef) {
+	/*
+	 
+	 Note: It appears that the loginwindow fails to call this method, and this does not appear to be specific to this code,
+	 as it also affects the NullAuthPlugin sample code from Apple. A bug has been filed with Apple on this (rdar://7052473).
+	 
+	 For most plugins this probably does not matter as the loginwindow (and associated processes) exists when this would be
+	 called taking any malloc'ed memory with it. The only issues would be with out-of-process resources (LDAP connections, etc).
+	 
+	*/
+	
 	asl_warn("Plugin finishing");
 	
 	#pragma mark cleanup pluginRef
