@@ -1,4 +1,4 @@
-# A loginwindow plugin (!AuthorizationPlugin) to run `aklog` early in the login process to avoid problems with AFS home directories.
+A loginwindow plugin (!AuthorizationPlugin) to run `aklog` early in the login process to avoid problems with AFS home directories.
 
 Note: this is not about Apple's AFP system, but rather with [http://en.wikipedia.org/wiki/Andrew_File_System Andrew File System] setups.
 
