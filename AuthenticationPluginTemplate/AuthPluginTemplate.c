@@ -30,6 +30,7 @@
 */
 
 #import <Security/Security.h>
+#import <DirectoryService/DirectoryService.h>
 #import <asl.h>
 
 #include <Security/AuthorizationPlugin.h>
@@ -132,6 +133,27 @@ static OSStatus MechanismInvoke(AuthorizationMechanismRef mechRef) {
 	asl_warn("Mechanism %s invoking", ((mechStructure *) mechRef)->mechName);
 	
 	// TODO implimentation code here
+	
+	/* Sample code to access authorization variables
+		The best documentation for the values is in the NullAuthPlugin sample code, search for 'kStateKeys[]'
+		http://developer.apple.com/SampleCode/NullAuthPlugin/listing1.html
+	
+	
+	char * userName = NULL;
+	
+	const AuthorizationValue * authValue;
+	AuthorizationContextFlags junkFlags;
+	OSStatus result;
+	
+	// we are getting the value from DirectoryServices, this is copied in by one of the other mechanisms (probably loginwindow:login)
+	result = ((mechStructure *) mechRef)->callbacks->GetContextValue(((mechStructure *) mechRef)->authEngine, kAuthorizationEnvironmentUsername, &junkFlags, &authValue);
+	if (result != errAuthorizationSuccess) {
+		asl_error("Unable to read the username");
+	} else {
+		userName = (char *)authValue->data;
+	}
+	
+	*/
 
 	#pragma mark accept the login
 	if (errAuthorizationSuccess != ((mechStructure *) mechRef)->callbacks->SetResult(((mechStructure *) mechRef)->authEngine, kAuthorizationResultAllow)) {

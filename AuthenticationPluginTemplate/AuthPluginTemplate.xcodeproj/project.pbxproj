@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A1088031007D92400086E8D /* AuthPluginTemplate.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A1088021007D92400086E8D /* AuthPluginTemplate.c */; };
 		4A1088101007DA6800086E8D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A10880F1007DA6800086E8D /* Security.framework */; };
+		4A108CE1100BDB3700086E8D /* DirectoryService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A108CE0100BDB3700086E8D /* DirectoryService.framework */; };
 		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -17,6 +18,7 @@
 		4A1088011007D92400086E8D /* AuthPluginTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthPluginTemplate.h; sourceTree = "<group>"; };
 		4A1088021007D92400086E8D /* AuthPluginTemplate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AuthPluginTemplate.c; sourceTree = "<group>"; };
 		4A10880F1007DA6800086E8D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		4A108CE0100BDB3700086E8D /* DirectoryService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DirectoryService.framework; path = /System/Library/Frameworks/DirectoryService.framework; sourceTree = "<absolute>"; };
 		8D576316048677EA00EA77CD /* AuthPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -27,6 +29,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A1088101007DA6800086E8D /* Security.framework in Frameworks */,
+				4A108CE1100BDB3700086E8D /* DirectoryService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				4A10880F1007DA6800086E8D /* Security.framework */,
+				4A108CE0100BDB3700086E8D /* DirectoryService.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
