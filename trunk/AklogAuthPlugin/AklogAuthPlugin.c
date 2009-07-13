@@ -16,7 +16,7 @@
  *	To the author(s) best efforts this code is free of bugs, but no garentee or warentee is made or implied
  *
  *	Version history: (the most complete history can be found in the SVN commit comments)
- *		1.0 - rev 2 - July 11, 2009 - intial import of the project
+ *		1.0 - rev 5 - July 12, 2009 - intial import of the project
  *
 */
 
@@ -28,6 +28,7 @@
 #include "AklogAuthPlugin.h"
 
 #include <sys/kauth.h>
+#include <unistd.h>
 
 
 //============================
