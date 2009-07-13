@@ -21,6 +21,7 @@
 */
 
 #import <Security/Security.h>
+#import <DirectoryService/DirectoryService.h>
 #import <asl.h>
 
 #include <Security/AuthorizationPlugin.h>
@@ -136,21 +137,21 @@ static OSStatus MechanismInvoke(AuthorizationMechanismRef mechRef) {
 	AuthorizationContextFlags junkFlags;
 	const AuthorizationValue * authValue;
 	
-	if (errAuthorizationSuccess != ((mechStructure *) mechRef)->callbacks->GetContextValue(((mechStructure *) mechRef)->authEngine, "uid", &junkFlags, &authValue)) {
+	if (errAuthorizationSuccess != ((mechStructure *) mechRef)->callbacks->GetContextValue(((mechStructure *) mechRef)->authEngine, kDS1AttrUniqueID, &junkFlags, &authValue)) {
 		asl_error("Unable to get the uid");
 		gotAllUserInformaiton = FALSE;
 	} else {
 		uid = *(uid_t*)authValue->data;
 	}
 	
-	if (errAuthorizationSuccess != ((mechStructure *) mechRef)->callbacks->GetContextValue(((mechStructure *) mechRef)->authEngine, "gid", &junkFlags, &authValue)) {
+	if (errAuthorizationSuccess != ((mechStructure *) mechRef)->callbacks->GetContextValue(((mechStructure *) mechRef)->authEngine, kDS1AttrPrimaryGroupID, &junkFlags, &authValue)) {
 		asl_error("Unable to get the gid");
 		gotAllUserInformaiton = FALSE;
 	} else {
 		gid = *(uid_t*)authValue->data;
 	}
 	
-	if (errAuthorizationSuccess != ((mechStructure *) mechRef)->callbacks->GetContextValue(((mechStructure *) mechRef)->authEngine, "home", &junkFlags, &authValue)) {
+	if (errAuthorizationSuccess != ((mechStructure *) mechRef)->callbacks->GetContextValue(((mechStructure *) mechRef)->authEngine, kDS1AttrNFSHomeDirectory, &junkFlags, &authValue)) {
 		asl_error("Unable to get the home dir");
 		gotAllUserInformaiton = FALSE;
 	} else {
