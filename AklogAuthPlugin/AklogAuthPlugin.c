@@ -13,7 +13,7 @@
  *		This will call aklog as the user and then read out the users dock preferences (to warm up AFS)
  *
  *
- *	To the author(s) best efforts this code is free of bugs, but no garentee or warentee is made or implied
+ *	To the author(s) best efforts this code is free of bugs, but no guarantee or warranty is made or implied
  *
  *	Version history: (the most complete history can be found in the SVN commit comments)
  *		1.0 - rev 5 - July 12, 2009 - intial import of the project
