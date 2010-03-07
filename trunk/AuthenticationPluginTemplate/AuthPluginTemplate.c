@@ -22,7 +22,7 @@
  *		- http://developer.apple.com/technotes/tn2008/tn2228.html
  *		- http://developer.apple.com/samplecode/NullAuthPlugin/index.html
  *
- *	To the author(s) best efforts this code is free of bugs, but no garentee or warentee is made or implied
+ *	To the author(s) best efforts this code is free of bugs, but no guarantee or warranty is made or implied
  *
  *	Version history: (a more complete history can be found in the SVN commit comments)
  *		1.0 - rev 2 - July 11, 2009 - intial import of the project
